@@ -1,8 +1,32 @@
-nav > ul {
+nav {
     display: flex;
-    list-style: none;
+    justify-content: space-between;
 }
 
-a:link, a:visited, a:hover, a:active {
+nav>ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid gray;
+}
+
+li a {
+    text-decoration: none;
+}
+li a:hover {
+    text-decoration: underline;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
     color: #050505;
+}
+
+footer{
+    padding: 10px 0;
+    border-top: 1px solid grey;
 }

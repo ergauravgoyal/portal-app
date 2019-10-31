@@ -1,29 +1,14 @@
-import history from "../../src/history";
+
 import {
-  CREATE_STREAM,
-  EDIT_STREAM,
-  FETCH_AUTHORS,
-  FETCH_STREAM,
   DELETE_AUTHOR,
   FETCH_AUTHOR,
-  FETCH_AUTHORS_ERROR,
   FETCH_AUTHORS_REQUESTED,
   FETCH_AUTHORS_SUCCESS
 } from "./types";
 
 
-// export const createStream = formValues => async (dispatch, getState) => {
-//   const { userId } = getState().auth;
-//   const response = await streams.post("/streams", { ...formValues, userId });
 
-//   dispatch({
-//     type: CREATE_STREAM,
-//     payload: response.data
-//   });
-//   history.push("/");
-// };
-
-function fetchAuthorsRequested() {
+export const fetchAuthorsRequested = () => {
   return {
     type: FETCH_AUTHORS_REQUESTED
   }
@@ -46,11 +31,11 @@ export const fetchAuthors = () => async dispatch => {
   //   payload: response
   // });
 };
-export const fetchAuthorsSuccess = (authors)  => {
+export const fetchAuthorsSuccess = (authors) => {
   return {
     type: FETCH_AUTHORS_SUCCESS,
     payload: authors
-}
+  }
 }
 export const fetchAuthorsError = () => async dispatch => {
 
@@ -68,9 +53,9 @@ export const fetchAuthor = id => async dispatch => {
         payload: response
       });
     }).catch(error => {
-   
+
     })
- 
+
 };
 
 // export const editStream = (id, formValues) => async dispatch => {
@@ -85,7 +70,7 @@ export const fetchAuthor = id => async dispatch => {
 export const deleteAuthor = id => async dispatch => {
   await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
     method: 'DELETE'
-  }).then(dispatch())
+  })
 
   dispatch({
     type: DELETE_AUTHOR,

@@ -15,16 +15,14 @@ class ViewAuthor extends Component {
             company,
             email,
             name,
-            phone,
-            username,
-            website } = this.props.author;
+            username } = this.props.author;
         return (
             <Container maxWidth="lg">
                 <h1>{name} ({username})</h1>
                 <p>Works at {company.name}</p>
                 <address>
-                    Contact <a href={`mailto:${email}`}>{name}</a>. <br/>
-                    Address: <br/>
+                    Contact <a href={`mailto:${email}`}>{name}</a>. <br />
+                    Address: <br />
                     {address.suite}<br />
                     {address.street}<br />
                     {address.city}<br />

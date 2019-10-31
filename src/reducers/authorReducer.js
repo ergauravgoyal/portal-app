@@ -8,7 +8,6 @@ import {
     FETCH_AUTHORS_SUCCESS,
     FETCH_AUTHORS_ERROR
 } from "../actions/types";
-import _ from "lodash";
 
 const initialState = {
     isLoading: false,
@@ -26,16 +25,13 @@ export default (state = initialState, action) => {
         case CREATE_AUTHOR:
             return { ...state, [action.payload.id]: action.payload };
         case FETCH_AUTHOR:
-            debugger;
             return { ...state, [action.payload.id]: action.payload };
         case EDIT_AUTHOR:
             return { ...state, [action.payload.id]: action.payload };
         case DELETE_AUTHOR:
-            debugger;
-            return _.omit(state, action.payload);
+            return {...state, authors: state.authors.filter(item => item.id !== action.payload)};
         case FETCH_AUTHORS:
-            debugger;
-            return { ...state, authors: action.payload }; //mapKeys return object
+            return { ...state, authors: action.payload };
         default:
             return state;
     }
