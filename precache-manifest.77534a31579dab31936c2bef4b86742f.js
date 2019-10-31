@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7c8d906530a5e17af7da8d5f92d618b0",
+    "revision": "b22f4e8ee3b287d52f21af73758b82cf",
     "url": "/portal-app/index.html"
   },
   {
-    "revision": "ef6d469a0ed669f2b746",
+    "revision": "bd8ac94999764275e1cc",
     "url": "/portal-app/static/css/main.7c297a5a.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portal-app/static/js/2.62debea1.chunk.js"
   },
   {
-    "revision": "ef6d469a0ed669f2b746",
-    "url": "/portal-app/static/js/main.0b837332.chunk.js"
+    "revision": "bd8ac94999764275e1cc",
+    "url": "/portal-app/static/js/main.49199e81.chunk.js"
   },
   {
     "revision": "c31c6f2263152a93d0b5",
